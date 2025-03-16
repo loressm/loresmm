@@ -1,0 +1,176 @@
+/* Reset base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+    width: 100%;
+    height: 80px; /* Altezza dell'header */
+}
+
+/* Logo */
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    width: 150px;
+}
+
+/* Menu Lingua */
+.language-selector {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.language-selector select {
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 14px;
+    padding: 5px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Icona dell'hamburger che cambia quando il menu è aperto */
+.hamburger.open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Menu principale (di default invisibile su mobile) */
+ul.menu {
+    display: flex; /* Visibile di default su desktop */
+    list-style: none;
+    gap: 20px;
+    padding-right: 20px;
+    align-items: center;
+}
+
+ul.menu li {
+    text-align: center;
+    width: 100%; /* Assicurati che gli elementi del menu occupino tutta la larghezza */
+}
+
+ul.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    display: block; /* Rende l'intero link cliccabile */
+}
+
+/* Animazione del menu (scende dall'alto) */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%); /* Menu parte da sopra */
+    }
+    to {
+        transform: translateY(0); /* Menu si sposta fino alla posizione finale */
+    }
+}
+
+/* Stile mobile */
+@media (max-width: 768px) {
+    /* Centrare il logo in versione mobile */
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: flex; /* Mostra l'icona dell'hamburger solo su mobile */
+    }
+
+    ul.menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 80px; /* Inizia subito sotto l'header */
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 80px); /* Copre tutta l'altezza disponibile sotto l'header */
+        background-color: #333;
+        padding: 20px;
+        box-sizing: border-box;
+        overflow-y: auto;
+    }
+
+    ul.menu.open {
+        display: flex;
+        animation: slideDown 0.3s ease-out; /* Animazione che fa scendere il menu dall'alto */
+    }
+}
+
+/* Corpo della pagina */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 5px 0;
+}

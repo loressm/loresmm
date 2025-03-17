@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Oss - Firma Navn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Menu Lingua -->
+        <div class="language-selector">
+            <select onchange="location = this.value;">
+                <option value="chi-siamo.html">🇮🇹 ITA</option>
+                <option value="chi-siamo-en.html">🇬🇧 ENG</option>
+                <option value="chi-siamo-no.html" selected>🇳🇴 NOR</option>
+            </select>
+        </div>
+
+        <!-- Logo -->
+        <div class="logo">
+            <a href="index-no.html"><img src="logo.png" alt="Firma Logo"></a>
+        </div>
+
+        <!-- Hamburger Menu e Nav -->
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul id="menu" class="menu">
+                <li><a href="chi-siamo-no.html">Om Oss</a></li>
+                <li><a href="servizi-no.html">Våre Tjenester</a></li>
+                <li><a href="contatti-no.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenuto delle pagine -->
+    <main>
+        <h1>Om Oss</h1>
+        <p>Velkommen til vår Om Oss-side. Her kan du lære mer om selskapet vårt.</p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Social Media Lore</p>
+        <p>Organisasjonsnummer: 11111111111</p>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

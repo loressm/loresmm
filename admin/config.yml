@@ -1,0 +1,17 @@
+backend:
+  name: github
+  repo: tuo-username/tuo-repository # Sostituisci con il tuo nome utente GitHub e il nome del repository
+  branch: main # O 'master', a seconda del branch che usi
+
+media_folder: "static/images"  # Dove saranno caricate le immagini
+public_folder: "/images"      # Dove saranno visibili le immagini nel sito
+
+collections:
+  - name: "blog"              # Nome della collezione
+    label: "Blog Posts"        # Etichetta per il CMS
+    folder: "content/blog"     # Dove sono archiviati i post (nella cartella del tuo progetto)
+    create: true               # Permette di creare nuovi post
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"  # Come sarà il nome del file del post
+    fields:
+      - { label: "Title", name: "title", widget: "string" }  # Titolo del post
+      - { label: "Body", name: "body", widget: "markdown" }  # Corpo del post, in Markdown

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netlify CMS</title>
+  <link rel="stylesheet" href="https://unpkg.com/netlify-cms@2.0.0/dist/netlify-cms.css">
+</head>
+<body>
+  <!-- Carica il CMS -->
+  <script src="https://unpkg.com/netlify-cms@2.0.0/dist/netlify-cms.js"></script>
+
+  <!-- Includi il widget di Netlify Identity per il login -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+  <script>
+    // Quando il widget è pronto, mostriamo il login se non c'è nessun utente
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', (user) => {
+        if (!user) {
+          window.netlifyIdentity.open();  // Mostra il login
+        }
+      });
+    }
+  </script>
+</body>
+</html>

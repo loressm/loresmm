@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Menu Lingua -->
+        <div class="language-selector">
+            <select onchange="location = this.value;">
+                <option value="index.html" selected>🇮🇹 ITA</option>
+                <option value="index-en.html">🇬🇧 ENG</option>
+                <option value="index-no.html">🇳🇴 NOR</option>
+            </select>
+        </div>
+
+        <!-- Logo -->
+        <div class="logo">
+            <a href="index.html"><img src="/images/logo.png" alt="Logo Azienda"></a>
+        </div>
+
+        <!-- Hamburger Menu e Nav -->
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul id="menu" class="menu">
+                <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                <li><a href="servizi.html">I Nostri Servizi</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Footer -->
+    <footer>
+        <p>Social Media Lore</p>
+        <p>Partita Iva 11111111111</p>
+    </footer>
+</body>
+
+</html>
